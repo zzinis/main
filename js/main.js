@@ -12,30 +12,6 @@ const num = $("#num ul");
 const speed = 1000;
 
 
-// // letter motion
-// $(txt_li).each(function(index, data){
-//     letter($(data), 0.1);
-// });
-
-// function letter(el, interval){
-//     const txt = el.text();
-//     el.text("");
-//     let num=0;
-
-//     for(let letter of txt){
-//         el.append(
-//             $("<span>")
-//                 .text(letter)
-//                 .css({
-//                     "transition-delay": `${num*interval}s`,
-//                     "display": "inline-block" 
-//                 })
-//         );
-//         num++;
-//     }
-// }
-
-
 // slide motion
 
 txt.find("li").eq(1).addClass("on");

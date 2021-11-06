@@ -1,3 +1,14 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+ul, ol, li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
 #visual {
   width: 100%;
   height: calc( 100vh - 151px);
@@ -29,17 +40,39 @@
               height: 25%;
               display: flex;
               position: absolute;
-              top: 20px;
+              top: 40px;
               left: 2%;
               font: 5vh/1 'arial';
               transform: scale(1.2);
               transition: 0.3s;
               opacity: 0; }
+              #visual .inner .wrap .left #txt ul li svg text {
+                font: 42px/1 'Overpass';
+                fill: #fff;
+                stroke: #111;
+                stroke-width: 2;
+                stroke-linejoin: miter;
+                stroke-linecap: square;
+                stroke-dasharray: 240px;
+                stroke-dashoffset: 240px;
+                transform: scale(0.96);
+                transform-origin: center center;
+                animation: ani 3s alternate-reverse linear infinite; }
+@keyframes ani {
+  0% {
+    stroke-dashoffset: 240px;
+    transition: stroke-dashoffset 1s 1s, fill 1s 0s; }
+  100% {
+    fill: #111;
+    stroke-width: 1;
+    stroke-dashoffset: 0px;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s 0s, fill 1s 1s; } }
               #visual .inner .wrap .left #txt ul li.on {
                 transform: scale(1);
                 opacity: 1; }
         #visual .inner .wrap .left .btnview {
-          margin-top: 100px;
+          margin-top: 150px;
           margin-bottom: 45px; }
           #visual .inner .wrap .left .btnview a {
             color: #333;
@@ -71,7 +104,7 @@
           width: 70vw;
           height: 23vh;
           position: absolute;
-          top: 12%;
+          top: 23%;
           left: 1%;
           margin-top: -10vh;
           overflow: hidden; }
@@ -144,20 +177,22 @@
                 width: 100%;
                 height: 100%;
                 position: absolute;
-                top: 2px;
-                left: 5px;
-                transform: scale(1);
-                transition: 0.3s; }
+                top: 3px;
+                left: 2px;
+                transform: scale(0.2);
+                transition: 0.3s;
+                color: #fff; }
               #visual .inner .wrap .right #num ul li.on {
                 transform: scale(1.2); }
                 #visual .inner .wrap .right #num ul li.on::before {
                   transform: scale(1.5);
-                  opacity: 0; }
+                  opacity: 0;
+                  color: #111; }
         #visual .inner .wrap .right #pic {
           width: 100%;
           height: 200px;
           position: absolute;
-          top: 70%;
+          top: 73%;
           left: 1%;
           margin-top: -10vh;
           overflow: hidden; }
@@ -245,16 +280,5 @@
           display: inline-block; }
         #visual .inner .bottom .second:hover {
           transform: translate(10px, 0); }
-
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box; }
-
-ul, ol, li {
-  list-style: none; }
-
-a {
-  text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */
