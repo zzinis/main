@@ -186,7 +186,7 @@ $("body").on("click", ".btnview", function(){
 
 $("body").on("click", ".pop span", function(){
 
-    $(".pop").fadeOut(500,function(){
+    $(".pop").fadeOut(700,function(){
         $(this).remove();
     })
 });
