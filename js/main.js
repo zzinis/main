@@ -158,21 +158,34 @@ prev.on("click",function(e){
 $("body").on("click", ".btnview", function(e){
     e.preventDefault();
 
-    let imgSrc = $(this).children("a").attr("href");
-    var video = $('<video width="640" height="264" autoplay></video>')
-            .append('<source src="./img/interior.mp4" type="video/mp4" />')
-            .appendTo($("#video"));
+    let vidId = $(this).children("a").attr("href");
+
 
     $("body").append(
         $("<div class = 'pop'>")
             .append(
-                $("<video>").attr({src: imgSrc}),
+                $("<video>").attr({
+                    src: "./img/interior.mp4"+vidId,
+                    width:"100%",
+                    height:400,
+                    autoplay:"autoplay"
+                    
+                }),
                 $("<span>").text("close")
             )
     )
+
+    
 });
 
+
+$("body").on("click", ".btnview", function(){
+    $(".pop").fadeIn(500)
+});
+
+
 $("body").on("click", ".pop span", function(){
+
     $(".pop").fadeOut(500,function(){
         $(this).remove();
     })
