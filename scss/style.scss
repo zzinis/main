@@ -22,7 +22,7 @@ a{ text-decoration:none; }
             flex-wrap: wrap;
             .left{
                 width: 29%;
-                height: 65vh;
+                height: 615px;
                 padding-top: 40px;
                 border-bottom: 1px solid #bbb;
                 margin-right: 2%;
@@ -30,7 +30,7 @@ a{ text-decoration:none; }
                     position: relative;
                     ul{
                         width: 100%;
-                        height: 400%;
+                        height: 100%;
                         position: absolute;
                         top: -100%;
                         li{
@@ -38,12 +38,12 @@ a{ text-decoration:none; }
                             height: 25%;
                             display: flex;
                             position: absolute;
-                            top: 40px;
+                            top: 66px;
                             left: 2%;
-                            font: 5vh/1 'arial';
                             transform: scale(1.2);
                             transition: 0.3s;
                             opacity: 0;
+                            transform: translate(20px,10px);
                             svg text{
                                 font: 42px/1 'Overpass';
                                 fill: #fff;
@@ -83,17 +83,19 @@ a{ text-decoration:none; }
 
                 }
                 .btnview{
-                    margin-top: 150px;
-                    margin-bottom: 45px;
+                    margin-top: 170px;
+                    margin-bottom: 35px;
+                    z-index: 3;
                     a{
                         color: #333;
                         display: inline-block;
                         font-size: 22px;
                         margin: 0px 10px 100px 10px;
                         transition: 0.5s ease-in-out;
-    
+                        cursor: pointer;
+                        z-index: 2;
                         &:hover{
-                        transform: scale(1.2);
+                            transform: scale(1.2);
                         }
                         
                     }
@@ -103,33 +105,59 @@ a{ text-decoration:none; }
                         color: #333;
                         margin-bottom: 80px;  
                     }
-
+                    
                 }
 
-
-                >.pic{
-                    width: 100%;
+                >.bg{
+                    width: 340px;
                     height: 200px;
-                    img{
+                    position: absolute;
+                    top: 46%;
+                    left: 0;
+                    overflow: hidden;
+                    
+                    ul {
                         width: 100%;
-                        height: 100%;
-                        object-fit: cover;
+                        height: 400%;
+                        position: absolute;
+                        top: -100%;
+                        
+                        li {
+                            width: 100%;
+                            height: 25%;
+                            transition: 0.5s;
+                            
+                            img{
+                                width: 340px;
+                                height: 200px;
+                                object-fit: cover;
+                                transition: 0.5s;
+                            }
+                            
+                            &.on {
+                                img {
+                                    transform: scale(1.1);
+                                
+                                }
+                            }
+                        }
                     }
+                    
 
                 }
                 
             }
             .right{
                 width: 69%;
-                height: 65vh;
+                height: 615px;
                 padding-top: 40px;
                 border-bottom: 1px solid #bbb;
                 position: relative;
                 #subTxt{
-                    width: 70vw;
-                    height: 23vh;
+                    width: 100%;
+                    height: 200px;
                     position: absolute;
-                    top: 23%;
+                    top: 20%;
                     left: 1%;
                     margin-top: -10vh;
                     overflow: hidden;
@@ -141,8 +169,8 @@ a{ text-decoration:none; }
                         top: -100%;
             
                         li {
-                            width: 100%;
-                            height: 25%;
+                            width: 25%;
+                            height: 100%;
                             display: flex;
                             justify-content: left;
                             align-items: center;
@@ -157,7 +185,7 @@ a{ text-decoration:none; }
                             article{
                                 position: absolute;
                                 left: 1%;
-                                top: 35%;
+                                top: 36%;
                                 span {
                                     font: 15px/1.4 'arial';
                                     color: #999999;
@@ -193,7 +221,7 @@ a{ text-decoration:none; }
 
                 #num {
                     width: 80px;
-                    height: 6vh;
+                    height: 60px;
                     position: absolute;
                     top: 42%;
                     right: 0%;
@@ -237,9 +265,8 @@ a{ text-decoration:none; }
                     width: 100%;
                     height: 200px;
                     position: absolute;
-                    top: 73%;
+                    top: 57%;
                     left: 1%;
-                    margin-top: -10vh;
                     overflow: hidden;
             
                     ul {
@@ -275,7 +302,7 @@ a{ text-decoration:none; }
 
             .btnPrev {
                 position: absolute;
-                bottom: 12%;
+                bottom: 18%;
                 right: 4%;
                 transform: translateY(-50%);
                 display: block;
@@ -285,6 +312,7 @@ a{ text-decoration:none; }
                 text-align: center;
                 font: 14px/40px 'arial';
                 color: #555;
+                margin-bottom: 5px;
         
                 i {
                     font-size: 13px;
@@ -294,7 +322,7 @@ a{ text-decoration:none; }
         
             .btnNext {
                 position: absolute;
-                bottom: 12%;
+                bottom: 18%;
                 right: 0%;
                 transform: translateY(-50%);
                 display: block;
@@ -304,6 +332,7 @@ a{ text-decoration:none; }
                 text-align: center;
                 font: 14px/40px 'arial';
                 color: #555;
+                margin-bottom: 5px;
         
                 i {
                     font-size: 13px;
@@ -315,7 +344,7 @@ a{ text-decoration:none; }
 
         .bottom{
             width: 100%;
-            height: 10vh;
+            height: 150px;
             display: flex;
             padding: 30px 20px;
 
@@ -369,5 +398,33 @@ a{ text-decoration:none; }
             }
         }
 
+    }
+}
+
+.pop{
+    width: 50%;
+    height: 50%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    #video{
+        video{
+            width: 80%;
+            height: 80%;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        
+    }
+
+
+    span{
+        color: #fff;
+        float: right;
     }
 }
