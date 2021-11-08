@@ -159,24 +159,32 @@ $("body").on("click", ".btnview", function(e){
     e.preventDefault();
 
     let vidId = $(this).children("a").attr("href");
+    
 
 
     $("body").append(
         $("<div class = 'pop'>")
             .append(
-                $("<video>").attr({
-                    src: "./img/interior.mp4"+vidId,
-                    width:"100%",
-                    height:400,
-                    autoplay:"autoplay"
-                    
-                }),
-                $("<span>").text("close")
+                $("<div class ='top'>"),
+                $("<div class ='right'>"),
+                $("<div class ='bottom'>"),
+                $("<div class ='left'>")
             )
+                .append(
+                    $("<video>").attr({
+                        src: "./img/interior.mp4"+vidId,
+                        width:"100%",
+                        height:400,
+                        autoplay:"autoplay"
+                        
+                    }),
+                    $("<span>").text("close")
+                )
+            
     )
-
     
 });
+
 
 
 // $("body").on("click", ".btnview", function(){

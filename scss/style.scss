@@ -322,10 +322,21 @@ a{ text-decoration:none; }
                 font: 14px/40px 'arial';
                 color: #555;
                 margin-bottom: 5px;
+                transition: 0.5s;
         
                 i {
                     font-size: 13px;
                     color: #888;
+                }
+                &:hover{
+                    background: #666;
+                    transform: scale(0.95);
+                    position: absolute;
+                    bottom: 20.5%;
+                    right: 4%;
+                    i{
+                        color: #fff;
+                    }
                 }
             }
         
@@ -342,10 +353,21 @@ a{ text-decoration:none; }
                 font: 14px/40px 'arial';
                 color: #555;
                 margin-bottom: 5px;
+                transition: 0.5s;
         
                 i {
                     font-size: 13px;
                     color: #888;
+                }
+                &:hover{
+                    background: #666;
+                    transform: scale(0.95);
+                    position: absolute;
+                    bottom: 20.5%;
+                    right: 0;
+                    i{
+                        color: #fff;
+                    }
                 }
             }
 
