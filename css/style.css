@@ -74,7 +74,8 @@ a {
         #visual .inner .wrap .left .btnview {
           margin-top: 170px;
           margin-bottom: 35px;
-          z-index: 3; }
+          z-index: 3;
+          transition: 0.5s; }
           #visual .inner .wrap .left .btnview a {
             color: #333;
             display: inline-block;
@@ -83,13 +84,16 @@ a {
             transition: 0.5s ease-in-out;
             cursor: pointer;
             z-index: 2; }
-            #visual .inner .wrap .left .btnview a:hover {
-              transform: scale(1.2); }
           #visual .inner .wrap .left .btnview > p {
             display: inline-block;
             font: 16px/1 'arial';
             color: #333;
-            margin-bottom: 80px; }
+            margin-bottom: 80px;
+            transition: 0.5s; }
+          #visual .inner .wrap .left .btnview:hover a {
+            transform: scale(1.3); }
+          #visual .inner .wrap .left .btnview:hover p {
+            font: bold 16px/1 'arial'; }
         #visual .inner .wrap .left > .bg {
           width: 340px;
           height: 200px;
