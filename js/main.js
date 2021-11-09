@@ -187,9 +187,9 @@ $("body").on("click", ".btnview", function(e){
 
 
 
-// $("body").on("click", ".btnview", function(){
-//     $(".pop").fadeIn(500)
-// });
+$("body").on("click", ".btnview", function(){
+    $(".pop").fadeIn(500)
+});
 
 
 $("body").on("click", ".pop span", function(){
