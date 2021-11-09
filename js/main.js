@@ -165,7 +165,7 @@ $("body").on("click", ".btnview", function(e){
         $("<div class = 'pop'>")
             .append(
                 $("<video>").attr({
-                    src: "./img/interior.mp4"+vidId,
+                    src: "./img/interior.mp4",
                     width:"100%",
                     height:400,
                     autoplay:"autoplay"
@@ -173,16 +173,14 @@ $("body").on("click", ".btnview", function(e){
                 }),
                 $("<span>").text("close")
             )
-            
     )
-    
 });
 
 
 
-$("body").on("click", ".btnview", function(){
-    $(".pop").fadeIn(500)
-});
+// $("body").on("click", ".btnview", function(){
+//     $(".pop").fadeIn(500)
+// });
 
 
 $("body").on("click", ".pop span", function(){
